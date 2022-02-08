@@ -1,9 +1,9 @@
-import HeaderComponent from './components/layout/HeaderComponent'
+import LayoutComponent from './components/layout/LayoutComponent'
 
 function App() {
   return (
     <div className="App">
-        <HeaderComponent />
+        <LayoutComponent />
     </div>
   );
 }

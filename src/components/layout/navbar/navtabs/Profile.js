@@ -35,7 +35,7 @@ export default function Profile() {
                 onClick={handleClick}
                 color="inherit">
                 <Badge badgeContent={0} color="secondary">
-                    <AccountCircleIcon  style={{ fontSize: 37 }}/>
+                    <AccountCircleIcon  style={{ fontSize: 33 }}/>
                 </Badge>
             </IconButton>
             <Menu

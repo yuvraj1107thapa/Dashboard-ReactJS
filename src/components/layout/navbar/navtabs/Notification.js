@@ -6,10 +6,11 @@ import {
     Badge,
     List,
     ListItem,
-    ListItemIcon
+    ListItemIcon,
+    ListItemText
 } from "@material-ui/core";
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import { useStyles } from '../Styles';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+import { useStyles } from '../../LayoutStyles';
 
 export default function Notification() {
     const classes = useStyles();
@@ -38,7 +39,7 @@ export default function Notification() {
                 onClick={handleClick}
                 color="inherit">
                 <Badge badgeContent={4} color="secondary">
-                    <NotificationsIcon style={{paddingTop: '5px'}} />
+                    <NotificationsActiveIcon style={{ paddingTop: '6px', fontSize: 23 }} ActiveIcon/>
                 </Badge>
             </IconButton>
             <Menu
@@ -51,8 +52,12 @@ export default function Notification() {
                         {dropDownData.map((item, index) => (
                             <ListItem key={index} onClick={handleClose}>
                             {/* <ListItemIcon>{item.label[0].toUpperCase()}</ListItemIcon> */}
-                            <ListItemIcon>{item.label}</ListItemIcon>
-                            <ListItemIcon>{item.description}</ListItemIcon>
+                                <ListItemIcon>
+                                    <ListItemText
+                                        primary={item.label}
+                                        secondary={item.description}>
+                                    </ListItemText>
+                                </ListItemIcon>
                             </ListItem>
                     ))}
                      </List>
