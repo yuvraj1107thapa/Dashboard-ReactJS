@@ -5,10 +5,10 @@ import { useStyles } from '../views/ViewStyles'
 
 export default function UserByOverview() {
     const classes = useStyles();
-    return <Box className={classes.section}>
-        <Grid container>
-            <Grid item xs={12} sm={7}>
-                <Card>
+    return <Box style={{marginTop: '17px'}} >
+        <Grid container spacing={2}>
+            <Grid item xs={6} sm={7} >
+                <Card style={{height: '271px'}}>
                     <CardContent>
                         <Typography variant="h5" component="h6">
                             User Overview
@@ -16,7 +16,15 @@ export default function UserByOverview() {
                     </CardContent>
                 </Card>
             </Grid>
-            <Grid item xs={12} sm={5}></Grid>
+            <Grid item xs={6} sm={5}>
+                <Card style={{height: '271px'}}>
+                    <CardContent>
+                        <Typography variant="h5" component="h6">
+                            User By Device
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Grid>
         </Grid>
     </Box>
 }

@@ -27,7 +27,7 @@ export default function LayoutComponent() {
                 handleDrawerOpen={handleDrawerOpen} 
                 handleDrawerClose={handleDrawerClose} />
             {/* Defining routes */}
-            <Box className={classes.wrapper}>
+            <Box mt={8} className={classes.wrapper}>
                 <Routes>
                     <Route path = '/' element= {<Dashboard />}></Route>
                     <Route path = '/blog' element= {<BlogPosts />}></Route>
