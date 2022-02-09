@@ -10,15 +10,35 @@ import {
 import { PageTitle } from '../common/PageTitle';
 import { useStyles } from './ViewStyles'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import { randomValueGenerator } from '../../utils/StatsData';
 
 export default function Dashboard() {
     const classes = useStyles();
 
     const DisplayData = [
-        {label: "Post", value: "", icon: "", iconLable: ""},
-        {label: "Pages", value: "", icon: "", iconLable: ""},
-        {label: "Comments", value: "", icon: "", iconLable: ""},
-        {label: "Subscribers", value: "", icon: "", iconLable: ""}
+        {
+            label: "Post", 
+            value: randomValueGenerator({digit: 1000}), 
+            icon: <ArrowDropUpIcon />, 
+            iconLable: "4.7%"
+        },
+        {
+            label: "Pages", 
+            value: randomValueGenerator({digit: 100}), 
+            icon: <ArrowDropUpIcon />, 
+            iconLable: "12.4%"},
+        {
+            label: "Comments", 
+            value: randomValueGenerator({digit: 100}), 
+            icon: <ArrowDropDownIcon />, 
+            iconLable: "3.8"},
+        {
+            label: "Subscribers", 
+            value: randomValueGenerator({digit: 1000}), 
+            icon: <ArrowDropUpIcon />, 
+            iconLable: "2.71"
+        }
     ]
 
     return (
@@ -26,27 +46,29 @@ export default function Dashboard() {
             {/* Title section */}
             <PageTitle label="Dashboard" title="Blog Overview"/>
             {/* Small-stats  section*/}
-            <Grid container>
-                <Grid item xs={6} sm={3}>
-                    <Card>
-                        <CardContent>
-                            <Typography variant="body2" className={classes.statsLabel}>
-                                Pages
-                            </Typography>
-                            <Typography variant="h5" component="h6" className={classes.statsTitle}>
-                                325
-                            </Typography>
-                            <Typography component="p" style={{textAlign: "center", marginTop: "0px"}}>
-                                <Button 
-                                    size="small" 
-                                    className={classes.ratioBtn} 
-                                    startIcon={<ArrowDropDownIcon />}>
-                                    10%
-                                </Button>
-                            </Typography>
-                        </CardContent>
-                    </Card>
-                </Grid>
+            <Grid container spacing={1}>
+                {DisplayData.map( (item, index) => 
+                    <Grid item xs={6} sm={3}>
+                        <Card>
+                            <CardContent key={index} className={classes.cardContent}>
+                                <Typography variant="body2" className={classes.statsLabel}>
+                                    {item.label}
+                                </Typography>
+                                <Typography variant="h5" component="h6" className={classes.statsTitle}>
+                                    {item.value}
+                                </Typography>
+                                <Typography component="p" style={{textAlign: "center", marginTop: "0px"}}>
+                                    <Button 
+                                        size="small" 
+                                        className={classes.ratioBtn} 
+                                        startIcon={item.icon}>
+                                        {item.iconLable}
+                                    </Button>
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                )}
             </Grid>
         </Box>
     )
