@@ -12,6 +12,7 @@ import { useStyles } from './ViewStyles'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import { randomValueGenerator } from '../../utils/StatsData';
+import UserByOverview from '../blog/UserOverview';
 
 export default function Dashboard() {
     const classes = useStyles();
@@ -70,6 +71,8 @@ export default function Dashboard() {
                     </Grid>
                 )}
             </Grid>
+            {/* User overview section */}
+            <UserByOverview />
         </Box>
     )
 }
