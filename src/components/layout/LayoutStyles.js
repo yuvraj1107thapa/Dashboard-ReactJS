@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/core"
 import blue from "@material-ui/core/colors/blue"
 import blueGrey from "@material-ui/core/colors/blueGrey"
-import createSpacing from "@material-ui/core/styles/createSpacing"
 
 export const useStyles = makeStyles( (theme) => ({
     // Style for Navbar
@@ -45,8 +44,9 @@ export const useStyles = makeStyles( (theme) => ({
     wrapper: {
         height: "100vh",
         background: "#efefef",
-        paddingTop: 15,
-        paddingLeft: 260,
+        // paddingTop: 15,
+        // paddingLeft: 260,
+        padding: theme.spacing(2, 2, 0, 34),
         [theme.breakpoints.down("xs")]:{
             padding:theme.spacing(2, 2)
         }
