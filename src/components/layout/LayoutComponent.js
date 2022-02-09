@@ -26,7 +26,6 @@ export default function LayoutComponent() {
                 mobileOpen={mobileOpen} 
                 handleDrawerOpen={handleDrawerOpen} 
                 handleDrawerClose={handleDrawerClose} />
-            {/* Defining routes */}
             <Box mt={8} className={classes.wrapper}>
                 <Routes>
                     <Route path = '/' element= {<Dashboard />}></Route>

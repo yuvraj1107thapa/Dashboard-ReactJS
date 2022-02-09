@@ -2,7 +2,6 @@ import React from 'react'
 import { 
     Grid,
     Typography,
-    Button
 } from '@material-ui/core'
 import { useStyles } from '../views/ViewStyles'
 

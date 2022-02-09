@@ -8,7 +8,6 @@ export default function Sidebar(props) {
     const { mobileOpen, handleDrawerOpen, handleDrawerClose } = props;
     return (
         <nav className={classes.drawer} aria-label="mailbox folders">
-            {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
             <Hidden smUp implementation="css">
                 <Drawer
                     variant="temporary"
@@ -19,7 +18,7 @@ export default function Sidebar(props) {
                         paper: classes.drawerPaper,
                     }}
                     ModalProps={{
-                        keepMounted: true, // Better open performance on mobile.
+                        keepMounted: true, 
                     }}>
                     <SidebarNavItems handleDrawerClose={handleDrawerClose} />
                 </Drawer>

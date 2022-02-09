@@ -59,8 +59,8 @@ export default function Notification() {
                                     </ListItemText>
                                 </ListItemIcon>
                             </ListItem>
-                    ))}
-                     </List>
+                        ))}
+                    </List>
             </Menu>
         </Box>
     )
