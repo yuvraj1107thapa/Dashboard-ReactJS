@@ -15,12 +15,12 @@ export const PageTitle = (props) => {
             <Typography 
                 variant="body2"
                 className={classes.pageSubtitle}>
-                Dashboard
+                {label}
             </Typography>
             <Typography 
                 variant="h5" 
                 className={classes.pageTitle}>
-                Blog Overview
+                {title}
             </Typography>
             </Grid>
         </Grid>

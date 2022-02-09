@@ -71,7 +71,7 @@ export default function Dashboard() {
                     </Grid>
                 )}
             </Grid>
-            {/* User overview section */}
+            {/* User overview and User by device section */}
             <UserByOverview />
         </Box>
     )

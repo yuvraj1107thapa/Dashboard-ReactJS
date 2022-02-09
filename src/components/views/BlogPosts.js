@@ -1,9 +1,10 @@
 import React from 'react';
+import { PageTitle } from '../common/PageTitle';
 
 export default function BlogPosts() {
     return (
         <div>
-            <h1>Hello from BlogPosts</h1>
+            <PageTitle label="Components" title="Blog Posts"/>
         </div>
     )
 }

@@ -34,11 +34,6 @@ export default function LayoutComponent() {
                     <Route path = '/addpost' element= {<AddNewPosts />}></Route>
                     <Route path = '/profile' element= {<UserProfileLite />}></Route>
                     <Route path = '/logout' element= {<Logout />}></Route>
-                    {/* <Route exact path='/' render={() => <Dashboard />}/>
-                    <Route exact path='/blog' render={() => <BlogPosts />}/>
-                    <Route exact path='/addpost' render={() => <AddNewPosts />}/>
-                    <Route exact path='/profile' render={() => <UserProfileLite />}/>
-                    <Route exact path='/logout' render={() => <Logout />}/> */}
                 </Routes>
             </Box>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Card, CardContent, Typography } from '@material-ui/core'
+import { Box, Grid, Card, CardContent, Typography, Divider } from '@material-ui/core'
 import { useStyles } from '../views/ViewStyles'
 
 
@@ -13,6 +13,7 @@ export default function UserByOverview() {
                         <Typography variant="h5" component="h6">
                             User Overview
                         </Typography>
+                        <Divider/>
                     </CardContent>
                 </Card>
             </Grid>
@@ -22,6 +23,7 @@ export default function UserByOverview() {
                         <Typography variant="h5" component="h6">
                             User By Device
                         </Typography>
+                        <Divider />
                     </CardContent>
                 </Card>
             </Grid>

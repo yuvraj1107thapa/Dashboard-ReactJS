@@ -1,9 +1,8 @@
 import React from 'react';
+import { PageTitle } from '../common/PageTitle';
 
 export default function UserProfileLite() {
     return (
-        <div>
-            <h1>Hello from UserProfile</h1>
-        </div>
+        <PageTitle label="Overview" title="User Profile"/>
     )
 }
